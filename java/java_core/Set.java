@@ -4,7 +4,7 @@ Set: 无序, 不可以重复元素.
 
   |--TreeSet:可对Set集合中的元素进行排序.
       底层数据结构是二叉树. 保证元素唯一性的依据: CompareTo方法返回 return 0.
-	  
+
 	  TreeSet排序的
 	    第一种方式: 让元素自身具备比较性. 元素需要实现Comparable接口, 覆盖compareTo方法. 这种方式也称为元素自然排序,
       	第二种排序方式: 当元素自身不具备比较性,或具备的比较性不是需要的. 这时需要让集合自身具备比较性.  在集合初始化时,就有了比较方式. 定义比较器,
@@ -65,7 +65,7 @@ class Student implements Comparable{//该接口强制让学生具备比较性。
 
 class TreesetDemo{
 	public static void main(String[] args) {
-		TreeSet ts = new TreeSet(new MyCompare() );
+		TreeSet ts = new TreeSet(new MyCompare() );  //初始化时传入比较器, 默认就以比较器进行比较, 屏蔽类内部比较.
 		ts. add(new Student("lisi02", 22));
 		ts. add(new Student("lisi007", 20));
 		ts. add(new Student("lisi09", 19));
@@ -79,6 +79,7 @@ class TreesetDemo{
 	}
 }
 
+// 比较器实现Comparator接口
 class MyCompare implements Comparator{
 
 	@Override
