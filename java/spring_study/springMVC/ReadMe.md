@@ -19,7 +19,12 @@
         </servlet-mapping>
         ```
     2. 加载springmvc配置文件
+    如上, 添加在DispatcherServlet内
     ```xml
+      <init-param>
+              <param-name>contextConfigLocation</param-name>
+              <param-value>classpath:applicationContext.xml</param-value>
+      </init-param>
     ```
     3. springmvc文件 结构:
 
@@ -27,12 +32,12 @@
         - 处理器控制器
         - 处理器适配器
         - 视图解析器
-* 注解开发基础:
+      
+* 注解开发:
   - 常用的注解的使用
   - 参数绑定
   - 自定义参数绑定
 * springmvc 与 struts的区别
-
 * 高级:
   - 使用springmvc上传文件
   - 复杂类型的绑定--集合
