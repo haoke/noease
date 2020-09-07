@@ -5,6 +5,7 @@
         web.xml中 配置 DispatcherServlet
     2. 加载springmvc配置文件
     3. springmvc文件 结构:
+
         - handler
         - 处理器控制器
         - 处理器适配器
