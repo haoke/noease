@@ -1,5 +1,7 @@
 ## 一. 框架:
 
+![image](https://github.com/haoke/noease/blob/master/java/spring_study/springMVC/image.png)
+
 ## 二. 普通配置文件开发:
     1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
         ```xml
