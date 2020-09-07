@@ -11,13 +11,14 @@
               <param-name>contextConfigLocation</param-name>
               <param-value>classpath:applicationContext.xml</param-value>
           </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>dispatcher</servlet-name>
-        <url-pattern>*.do</url-pattern>
-    </servlet-mapping>
+          <load-on-startup>1</load-on-startup>
+        </servlet>
+        <servlet-mapping>
+          <servlet-name>dispatcher</servlet-name>
+          <url-pattern>*.do</url-pattern>
+        </servlet-mapping>
         ```
+
     2. 加载springmvc配置文件
     3. springmvc文件 结构:
 
