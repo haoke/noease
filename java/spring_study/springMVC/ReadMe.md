@@ -3,6 +3,21 @@
 * 普通配置文件开发:
     1. 配置前端控制器
         web.xml中 配置 DispatcherServlet
+        ```java
+        <servlet>
+          <servlet-name>dispatcher</servlet-name>
+          <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+          <init-param>
+              <param-name>contextConfigLocation</param-name>
+              <param-value>classpath:applicationContext.xml</param-value>
+          </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+        ```
     2. 加载springmvc配置文件
     3. springmvc文件 结构:
 
