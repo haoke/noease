@@ -1,8 +1,7 @@
 ## 一. 框架:
 
 ## 二. 普通配置文件开发:
-    1. 配置前端控制器
-        web.xml中 配置 DispatcherServlet
+    1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
         ```xml
         <servlet>
           <servlet-name>dispatcher</servlet-name>
@@ -18,8 +17,7 @@
           <url-pattern>*.do</url-pattern>
         </servlet-mapping>
         ```
-    2. 加载springmvc配置文件
-    如上, 添加在配置项DispatcherServlet内
+    2. 加载springmvc配置文件.   如上, 添加在配置项DispatcherServlet内
     ```xml
       <init-param>
               <param-name>contextConfigLocation</param-name>
@@ -27,7 +25,6 @@
       </init-param>
     ```
     3. springmvc文件 结构:
-
         - handler
         - 处理器控制器
         - 处理器适配器
