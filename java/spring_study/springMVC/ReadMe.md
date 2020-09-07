@@ -1,7 +1,6 @@
-[[TOC]]
-*框架:
+## 一. 框架:
 
-* 普通配置文件开发:
+## 二. 普通配置文件开发:
     1. 配置前端控制器
         web.xml中 配置 DispatcherServlet
         ```xml
@@ -34,7 +33,7 @@
         - 处理器适配器
         - 视图解析器
 
-* 注解开发:
+## 三. 注解开发:
   - 常用的注解的使用
     - RequestMapping 属性
       - value path
@@ -51,8 +50,8 @@
       - 实体类型(JavaBean)
       - 集合数据类型(List,Map等)
   - 自定义参数绑定
-* springmvc 与 struts的区别
-* 高级:
+## 四. springmvc 与 struts的区别
+## 五. 高级:
   - 使用springmvc上传文件
   - 复杂类型的绑定--集合
   - Validation校验器
