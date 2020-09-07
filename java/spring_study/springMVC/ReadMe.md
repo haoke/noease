@@ -3,7 +3,7 @@
 * 普通配置文件开发:
     1. 配置前端控制器
         web.xml中 配置 DispatcherServlet
-        ```java
+        ```xml
         <servlet>
           <servlet-name>dispatcher</servlet-name>
           <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -18,8 +18,9 @@
           <url-pattern>*.do</url-pattern>
         </servlet-mapping>
         ```
-
     2. 加载springmvc配置文件
+    ```xml
+    ```
     3. springmvc文件 结构:
 
         - handler
