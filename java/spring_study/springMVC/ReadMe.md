@@ -1,6 +1,5 @@
 ## 一. 框架:
 
-![image](image.png)
 
 ## 二. 普通配置文件开发:
     1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
@@ -50,6 +49,8 @@
       - 集合数据类型(List,Map等)
   - 自定义参数绑定
 ## 四. springmvc 与 struts的区别
+
+
 ## 五. 高级:
   - 使用springmvc上传文件
   - 复杂类型的绑定--集合
