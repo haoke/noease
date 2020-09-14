@@ -27,17 +27,22 @@
     ```
     3. springmvc文件 结构:
         - handler
+          - <bean>
         - 处理器控制器
+          -
         - 处理器适配器
         - 视图解析器
 
 ## 三. 注解开发:
   - 常用的注解的使用
     - RequestMapping 属性
-      - value path
+      - value/ path
       - method
+        - RequestMapping.[GET, POST, ...]
       - params
-      - headers
+        - params ={}
+      - headers 发送数据的请求头
+        - headers={"Accept"}
   - 参数绑定
     - 机制
       - 表单提交的数据都是k=v格式的
