@@ -2,7 +2,7 @@
 
 
 ## 二. 普通配置文件开发:
-    1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
+  1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
         ```xml
         <servlet>
           <servlet-name>dispatcher</servlet-name>
@@ -18,20 +18,20 @@
           <url-pattern>*.do</url-pattern>
         </servlet-mapping>
         ```
-    2. 加载springmvc配置文件.   如上, 添加在配置项DispatcherServlet内
-    ```xml
+  2. 加载springmvc配置文件.   如上, 添加在配置项DispatcherServlet内
+  ```xml
       <init-param>
               <param-name>contextConfigLocation</param-name>
               <param-value>classpath:applicationContext.xml</param-value>
       </init-param>
-    ```
-    3. springmvc文件 结构:
-        - handler
-          - <bean>
+  ```
+
+  3. springmvc文件 结构:
+
+      - handler
         - 处理器控制器
-          -
         - 处理器适配器
-        - 视图解析器
+      - 视图解析器
 
 ## 三. 注解开发:
   - 常用的注解的使用
