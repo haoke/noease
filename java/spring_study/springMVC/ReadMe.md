@@ -1,5 +1,14 @@
 ## 一. 框架:
+```flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
 
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
 
 ## 二. 普通配置文件开发:
   1. 配置前端控制器 :  web.xml中 配置 DispatcherServlet
@@ -23,7 +32,7 @@
       <init-param>
               <param-name>contextConfigLocation</param-name>
               <param-value>classpath:applicationContext.xml</param-value>
-      </init-param>
+       </init-param>
   ```
 
   3. springmvc文件 结构:

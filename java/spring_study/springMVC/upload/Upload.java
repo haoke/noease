@@ -17,6 +17,7 @@ public class FileUpload {
     }
 
 
+    @RequestMapping(path="remoteUpdate.do", method = RequestMapping.POST)
     public String remoteUpdate(MultipartFile mfile) throws IOException {
         String path = "http://localhost:9090/fileserver/uploads";
         String originalFilename = mfile.getOriginalFilename();
