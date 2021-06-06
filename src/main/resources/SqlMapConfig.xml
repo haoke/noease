@@ -14,7 +14,7 @@
         <package name="com.hk.pojo"/>
     </typeAliases>
 
-    <!--<environments default="test">
+    <environments default="test">
         <environment id="test">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
@@ -24,9 +24,8 @@
                 <property name="password" value="${jdbc.password}"/>
             </dataSource>
         </environment>
-    </environments>-->
+    </environments>
     <mappers>
-        <mapper resource="sqlmap/User.xml"></mapper>
         <package name="com.hk.dao"/>
     </mappers>
 </configuration>

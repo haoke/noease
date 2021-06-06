@@ -4,12 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hk.dao.UserMapper">
 <!--    <cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>-->
-    <select id="findUserById" parameterType="int" resultType="User">
+    <select id="findUserById" parameterType="int" resultType="com.hk.pojo.User">
         select * from user where id = #{id}
     </select>
 
     <!--使用占位符-->
-    <select id="findUserByName1" parameterType="String" resultType="User">
+    <select id="findUserByName1" parameterType="String" resultType="com.hk.pojo.User">
         select * from user
         <where>
             <if test="username != null" >
@@ -19,12 +19,12 @@
     </select>
 
 
-    <select id="findUserByName2" parameterType="String" resultType="User">
+    <select id="findUserByName2" parameterType="String" resultType="com.hk.pojo.User">
         select * from user where username like '%${username}%'
 
     </select>
 
-    <select id="findUserByName3" parameterType="UserQueryVo" resultType="User">
+    <select id="findUserByName3" parameterType="UserQueryVo" resultType="com.hk.pojo.User">
         select * from user
         <where>
             <include refid="query_user_where"></include>

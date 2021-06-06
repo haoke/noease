@@ -3,7 +3,6 @@ package com.hk.dao;
 import com.hk.pojo.User;
 import com.hk.pojo.UserCustom;
 import com.hk.pojo.UserQueryVo;
-import net.sf.ehcache.CacheManager;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
