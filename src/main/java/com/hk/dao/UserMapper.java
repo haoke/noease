@@ -14,4 +14,12 @@ public interface UserMapper {
      * @return user
      */
     public User findUserById(int id);
+
+    /**
+     * find user by  name
+     * sql: select * from user where username like ?
+     * @param user
+     * @return user
+     */
+    public List findUserByName1(User user);
 }

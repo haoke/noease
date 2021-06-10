@@ -7,4 +7,11 @@
     <select id="findUserById" parameterType="int" resultType="User">
         select * from user where id=#{id}
     </select>
+
+    <select id="findUserByName1" parameterType="user" resultType="user">
+        select * from user
+        <where>
+            and username like #{username}
+        </where>
+    </select>
 </mapper>
