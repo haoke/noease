@@ -18,11 +18,12 @@ public interface UserMapper {
 
     /**
      * find user by  name
-     * sql: select * from user where username like ?
+     * sql: select * from user where username like ?  /  like concat('%'+?+'%')
+     *
      * @param user
      * @return user
      */
-    public List findUserByName1(User user);
+    public List findUserByNameAndIdIn(User user);
 
     /**
      *find user by name
@@ -31,6 +32,14 @@ public interface UserMapper {
      * @return user
      */
     public List findUserByName2(User user);
+
+    /**
+     *
+     * @param user
+     * @return list
+     */
+    public List findUserByNameUseBind(User user);
+
 
     /**
      * insert user
@@ -48,6 +57,8 @@ public interface UserMapper {
      */
     public void updateUser(User user);
 
+
+    public void deleteUser(Integer id);
 
     public UserQueryVo findUserByNameFromUserQueryVo(UserQueryVo userQueryVo);
 

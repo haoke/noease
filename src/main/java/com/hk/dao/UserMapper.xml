@@ -5,16 +5,33 @@
 <mapper namespace="com.hk.dao.UserMapper">
 
     <select id="findUserById" parameterType="int" resultType="User">
-        select *
-        from user
-        where id = #{id}
+        select *         from user        where id = #{id}
     </select>
 
-    <select id="findUserByName1" parameterType="user" resultType="user">
+    <select id="findUserByNameAndIdIn" parameterType="user" resultType="user">
+
         select * from user
         <where>
-         <!--and username like #{username}-->
-            and username like concat( '%',#{username},'%')
+            <include refid="query_user_where_id_in"/>
+        </where>
+    </select>
+
+    <sql id="query_user_where_id_in">
+        <bind name="password" value="'%' + password + '%'"/>
+        <if test="username != null and username != ''">
+            and username like concat('%', #{username},'%')
+        </if>
+            or password like #{password}
+        <foreach collection="ids" open="and id in (" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </sql>
+
+    <select id="findUserByNameUseBind" parameterType="user" resultType="user">
+        <bind name="uname" value="'%'+ username +'%'"/>
+        select * from user
+        <where>
+            and username like #{uname}
         </where>
     </select>
 
@@ -22,7 +39,6 @@
         select * from user
         <where>
             <!--and username like '%${username}%'-->
-            and username like concat('%',#{username},'%')
         </where>
     </select>
 
@@ -46,7 +62,11 @@
             </set>
         </trim>
         where id = #{id}
-
     </update>
+
+    <delete id="deleteUser" parameterType="int" >
+        delete from user  where id = #{id}
+    </delete>
+
 
 </mapper>
